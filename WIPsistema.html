@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Macronutrient Goals</title>
+    <script src=jquery.js></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript' language='javascript' src='script.js'></script>
+</head>
+<body>
+    <div class="cabecalho">
+        <h1>WIPsistema</h1>
+        <h2>Seu sistema de controle de refeições</h2>
+        <label id="meta-carbo">Carboidratos</label>
+        <input type="number" id="meta-carbo" name="Carboidratos" value="" placeholder="porção de 100g"> 
+        <label id="prot">Proteínas</label>
+        <input type="number" id="meta-prot" name="Proteínas" value="" placeholder="porção de 100g">
+        <label id="gord">Gorduras</label>
+        <input type="number" id="meta-gord" name="Gorduras" value="" placeholder="porção de 100g">
+    </div>
+       <div class="container">
+        <h1>Macronutrient Calculator</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Comida</th>
+                    <th>Carboidratos (g)</th>
+                    <th>Proteínas (g)</th>
+                    <th>Gorduras (g)</th>
+                    <th>Porção (100g cada)</th>
+                </tr>
+            </thead>
+            <tbody id="food-table">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <button id="generate-charts">Gerar Graficos</button>
+        <button id="adicionar-refei">Adicionar refeição</button>
+
+        <div class="charts">
+            <div id="pie-chart" class="chart" style="width: 100%; height: 400px;"></div>
+            <div id="bar-chart" class="chart" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
+    </body>
+</html>
