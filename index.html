@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Nutrientes e Refeições</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Nutrientes e Refeições</h1>
+    </header>
+    
+    <main>
+        <!-- Parte 1: Seleção e Refeição -->
+        <section id="selecao-refeicao">
+            <h2>Selecione os alimentos para sua refeição</h2>
+            <div id="alimentos-container">
+                <!-- Os itens dos alimentos serão inseridos dinamicamente com JavaScript -->
+            </div>
+            <button id="btn-gerar-graficos">Gerar Gráficos</button>
+        </section>
+
+        <!-- Exibição dos Gráficos -->
+        <section id="graficos" style="display: none;">
+            <h2>Gráficos da Refeição</h2>
+            <canvas id="grafico1"></canvas>
+            <canvas id="grafico2"></canvas>
+            <button id="btn-adicionar-dia">Adicionar Refeição ao Dia</button>
+        </section>
+
+        <!-- Parte 2: Meta Diária e Refeições na Semana -->
+        <section id="meta-diaria">
+            <h2>Meta Diária e Refeições na Semana</h2>
+            <label for="meta-diaria-input">Defina sua meta diária (g):</label>
+            <input type="number" id="meta-diaria-input" placeholder="Ex: 200">
+            <h3>Refeições do Dia</h3>
+            <table id="tabela-refeicoes">
+                <thead>
+                    <tr>
+                        <th>Alimento</th>
+                        <th>Quantidade (g)</th>
+                        <th>Carboidratos (g)</th>
+                        <th>Proteínas (g)</th>
+                        <th>Gorduras (g)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Refeições serão adicionadas dinamicamente -->
+                </tbody>
+            </table>
+            <button id="btn-adicionar-semana">Adicionar Refeição à Semana</button>
+            <canvas id="grafico-semana"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Gerenciador de Nutrientes e Refeições</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
